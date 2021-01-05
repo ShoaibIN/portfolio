@@ -152,9 +152,16 @@ button {
   color: white;
 }
 
+.resp-menu {
+  display: flex;
+  width: 90px;
+  justify-content: space-around;
+}
+
 .nav-open {
   display: none;
-  font-size: 30px;
+  margin-bottom: 5px;
+  font-size: 38px;
   cursor: pointer;
 }
 
@@ -162,6 +169,7 @@ button {
   .nav-open {
     display: block;
   }
+
   .nav-links {
     display: none;
   }
@@ -261,6 +269,8 @@ body div.darkmode {
 }
 
 body div.darkmode2 {
+  margin-right: 25px;
+  align-self: center;
   font-size: 2rem;
   cursor: pointer;
   color: white;
