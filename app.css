@@ -117,7 +117,7 @@ p {
 
 /* Navbar */
 
-nav {
+.navbar {
   position: fixed;
   width: 98%;
   padding: 1rem 2rem;
@@ -126,6 +126,10 @@ nav {
   align-items: center;
   mix-blend-mode: difference;
   z-index: 100;
+}
+
+button {
+  cursor: pointer;
 }
 
 .logo {
@@ -146,6 +150,75 @@ nav {
   padding: 10px 15px;
   text-decoration: none;
   color: white;
+}
+
+.nav-open {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 640px) {
+  .nav-open {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+  }
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  /* background-color: rgb(0, 0, 0); */
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px
+  }
+
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
 }
 
 .shadowed {
@@ -237,11 +310,24 @@ body div.darkmode2 {
   padding: 0 15%;
 }
 
+@media screen and (max-width: 1600px) {
+  .portfolio-desc p {
+    padding: 0 10%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .portfolio-desc p {
+    padding: 0;
+  }
+}
+
+
 .portfolio {
   position: relative;
   margin: 0 auto;
   z-index: 1;
-  padding: 7.5em 0;
+  padding: 4em 0;
 }
 
 .portfolio figure {
@@ -296,50 +382,50 @@ body div.darkmode2 {
     width: 100%;
     margin-left: 0;
   }
+
+  .portfolio {
+    padding: 7.5em 0;
+  }
 }
 
-
-/* .portfolio button {
-  margin: 3rem 2rem 2rem 0;
-  width: 12rem;
-  padding: 1rem 1.5rem;
-  border-radius: 1rem;
-  font-size: 1rem;
-  background-color: #222;
-  color: white;
-  border: 1px solid white;
-  transition: all 0.3s ease;
-} */
-
-.portfolio-button 
-{
+.portfolio-button {
   float: left;
   text-decoration: none;
   width: 12rem;
   padding: 1rem 1.5rem;
   margin: 1.875em 0 3.75em 0;
   border-radius: 1rem;
-  font-size: 0.875em; 
+  font-size: 0.875em;
   background-color: #222;
   color: white;
   border: 1px solid white;
   transition: all 0.3s ease;
 }
 
-  @media screen and (max-width: 1024px) {
-    .portfolio-button  {
-      width: 22%; } }
-  @media screen and (max-width: 768px) {
-    .portfolio-button  {
-      width: 30%; } }
-  @media screen and (max-width: 640px) {
-    .portfolio-button  {
-      width: 80%;
-      } }
-  @media screen and (min-width: 1600px) {
-    .portfolio-button  {
-      width: 45%; } 
+@media screen and (max-width: 1599px) {
+  .portfolio-button {
+    width: 35%;
+    max-width: 300px;
   }
+}
+
+@media screen and (max-width: 1024px) {
+  .portfolio-button {
+    width: 35%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .portfolio-button {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .portfolio-button {
+    width: 45%;
+  }
+}
 
 
 .portfolio .checkGithub {
@@ -347,21 +433,34 @@ body div.darkmode2 {
   margin-right: 1%;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1599px) {
   .portfolio .checkGithub {
-    margin-left: 27.5%;
+    margin-right: 5%;
+    margin-left: 26%;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .portfolio .checkGithub {
-    margin-left: 19.5%;
+    margin-right: 5%;
+    margin-left: 15%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .portfolio .checkGithub {
+    margin-right: 5%;
+    margin-left: 13%;
   }
 }
 
 @media screen and (max-width: 640px) {
   .portfolio .checkGithub {
     margin: 1.875em 0 0 10%;
+  }
+
+  .portfolio .checkLive {
+    margin-left: 10%;
   }
 }
 

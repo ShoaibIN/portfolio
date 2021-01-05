@@ -24,4 +24,12 @@ document.addEventListener('scroll', () => {
     navbar.classList.remove('shadowed');
     toggle2.classList.add('toggle-button-nav');
   }
-})
+});
+
+document.querySelector('.nav-open').addEventListener('click', () => {
+  document.querySelector(".overlay").style.width = "100%";
+});
+
+document.querySelector('.closebtn').addEventListener('click', () => {
+  document.querySelector(".overlay").style.width = "0%";
+});
