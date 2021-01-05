@@ -268,7 +268,38 @@ body div.darkmode2 {
   text-align: center;
 }
 
-.portfolio button {
+@media screen and (max-width: 1024px) {
+  .portfolio p {
+    width: 80%;
+    margin-left: 10%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .portfolio p {
+    width: 90%;
+    margin-left: 5%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .portfolio p {
+    font-size: 1.125em;
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .portfolio p {
+    text-align: left;
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+
+/* .portfolio button {
   margin: 3rem 2rem 2rem 0;
   width: 12rem;
   padding: 1rem 1.5rem;
@@ -278,7 +309,38 @@ body div.darkmode2 {
   color: white;
   border: 1px solid white;
   transition: all 0.3s ease;
+} */
+
+.portfolio-button 
+{
+  float: left;
+  text-decoration: none;
+  width: 12rem;
+  padding: 1rem 1.5rem;
+  margin: 1.875em 0 3.75em 0;
+  border-radius: 1rem;
+  font-size: 0.875em; 
+  background-color: #222;
+  color: white;
+  border: 1px solid white;
+  transition: all 0.3s ease;
 }
+
+  @media screen and (max-width: 1024px) {
+    .portfolio-button  {
+      width: 22%; } }
+  @media screen and (max-width: 768px) {
+    .portfolio-button  {
+      width: 30%; } }
+  @media screen and (max-width: 640px) {
+    .portfolio-button  {
+      width: 80%;
+      } }
+  @media screen and (min-width: 1600px) {
+    .portfolio-button  {
+      width: 45%; } 
+  }
+
 
 .portfolio .checkGithub {
   margin-left: 32.5%;
@@ -331,17 +393,6 @@ body div.darkmode2 {
 
   .portfolio .info-right {
     float: right;
-  }
-
-  .portfolio p {
-    text-align: left;
-    width: 100%;
-    margin-left: 0;
-  }
-
-  .portfolio button {
-    /* margin-left: 1rem; */
-    margin-right: 2rem;
   }
 }
 
