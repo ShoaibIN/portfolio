@@ -1,0 +1,310 @@
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html,
+body {
+  background: #222222;
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+  transition: all 0.3s;
+  color: white;
+}
+
+p {
+  line-height: 1.5em;
+}
+
+/* Navbar */
+
+nav {
+  position: fixed;
+  width: 98%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  mix-blend-mode: difference;
+  z-index: 100;
+}
+
+.logo {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-item a {
+  display: inline-block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: white;
+}
+
+.shadowed {
+  background: #222;
+  mix-blend-mode: normal;
+  transition: all 0.3s ease-in;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  background: #dddddd;
+  height: 400px;
+  z-index: -1;
+}
+
+/* Invert the colors for dark mode */
+
+body div.darkmode {
+  align-self: flex-end;
+  font-size: 3.5rem;
+  padding: 1rem 1rem 0.75rem 1rem;
+  cursor: pointer;
+  mix-blend-mode: difference;
+  color: white;
+  margin-bottom: -40px;
+}
+
+body div.darkmode2 {
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.light,.dark, 
+.light2, .dark2 {
+  display: none;
+}
+
+.toggle-button {
+  display: block;
+}
+
+.toggle-button-nav {
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.invert {
+  filter: invert(1);
+}
+
+.invert-img {
+  filter: invert(1);
+}
+
+/* Portfolio Section */
+
+.portfolio-desc {
+  border-bottom: .5px solid #1f1c1c;
+  padding: 7.5rem 0;
+  text-align: center;
+}
+
+.portfolio-desc h2 {
+  font-size: 2em;
+  margin-bottom: 1.5rem;
+}
+
+.portfolio-desc p {
+  font-size: 1.2em;
+  font-weight: 200;
+  padding: 0 15%;
+}
+
+.page-wrap {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1600px;
+}
+
+@media screen and (max-width: 640px) {
+  .page-wrap {
+    width: 94%;
+  }
+}
+
+.portfolio {
+  position: relative;
+  margin: 0 auto;
+  z-index: 1;
+  padding: 7.5em 0;
+}
+
+.portfolio figure {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.portfolio img {
+  max-width: 100%;
+}
+
+@media screen and (min-width: 1600px) {
+  .portfolio figure {
+    float: right;
+  }
+
+  #img-left {
+    float: left;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .portfolio .info {
+    float: left;
+    width: 30%;
+    text-align: left;
+  }
+  .portfolio .info-right {
+    float: right;
+  }
+
+}
+
+.portfolio h3 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.portfolio hr {
+  width: 50%;
+  margin-bottom: 1.5rem;
+}
+
+.portfolio p {
+  font-size: 1.2em;
+  font-weight: 200;
+}
+
+.portfolio-button {
+  margin: 3rem 1rem;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+  background-color: #222;
+  color: white;
+  border: 1px solid white;
+  transition: all 0.3s ease;
+}
+
+.portfolio-button:hover {
+  filter: invert(1);
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
