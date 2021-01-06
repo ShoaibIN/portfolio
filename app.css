@@ -107,7 +107,6 @@ body {
   background: #222222;
   font-family: 'Montserrat', sans-serif;
   box-sizing: border-box;
-  transition: all 0.3s;
   color: white;
   scroll-behavior: smooth;
   overflow: auto;
@@ -148,6 +147,12 @@ button {
   cursor: pointer;
 }
 
+section h2 {
+  font-size: 2em;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
 /* Navbar */
 
 .navbar {
@@ -159,6 +164,7 @@ button {
   align-items: center;
   mix-blend-mode: difference;
   z-index: 100;
+  transition: all 0.1s;
 }
 
 .logo {
@@ -167,11 +173,13 @@ button {
   text-decoration: none;
   font-size: 2rem;
   font-weight: 600;
+  mix-blend-mode: difference;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
+  mix-blend-mode: difference;
 }
 
 .nav-item a {
@@ -192,6 +200,7 @@ button {
   margin-bottom: 5px;
   font-size: 38px;
   cursor: pointer;
+  mix-blend-mode: difference;
 }
 
 @media screen and (max-width: 640px) {
@@ -263,7 +272,13 @@ button {
 .shadowed {
   background: #222;
   mix-blend-mode: normal;
-  transition: all 0.3s ease-in;
+  transition: all 0.1s;
+}
+
+.lighten {
+  background: #dddddd;
+  mix-blend-mode: normal;
+  transition: all 0.1s;
 }
 
 .heading {
@@ -311,7 +326,8 @@ body div.darkmode2 {
   font-size: 2rem;
   cursor: pointer;
   color: white;
-  transition: all 0.3s ease;
+  transition: all 0.1s;
+  mix-blend-mode: difference;
 }
 
 .light,
@@ -344,11 +360,6 @@ body div.darkmode2 {
   border-bottom: .5px solid #1f1c1c;
   padding: 7.5rem 0;
   text-align: center;
-}
-
-.portfolio-desc h2 {
-  font-size: 2em;
-  margin-bottom: 1.5rem;
 }
 
 .portfolio-desc p {
@@ -557,16 +568,13 @@ body div.darkmode2 {
 .about {
   border-bottom: .5px solid #1f1c1c;
   background-color: #dddddd;
-  min-height: 50vh;
+  min-height: 45vh;
   padding: 7rem 0;
   text-align: center;
 }
 
 .about h2 {
   color: #222222;
-  font-size: 2em;
-  margin-bottom: 1.5rem;
-  font-weight: 600;
 }
 
 .about h3 {
@@ -630,4 +638,13 @@ body div.darkmode2 {
 
 .tags-container .tag-button:hover:after {
   width: 0%;
+}
+
+/* Contact Section */
+.contact {
+  border-bottom: .5px solid #1f1c1c;
+  background-color: #222222;
+  min-height: 100vh;
+  padding: 7rem 0;
+  text-align: center;
 }
