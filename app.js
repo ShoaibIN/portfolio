@@ -17,7 +17,7 @@ toggle2.addEventListener('click', invert);
 
 let navbar = document.querySelector('.navbar');
 document.addEventListener('scroll', () => {
-  if (window.scrollY > 402) {
+  if (window.scrollY > 399) {
     navbar.classList.add('shadowed');
     toggle2.classList.remove('toggle-button-nav');
   } else {
@@ -27,9 +27,19 @@ document.addEventListener('scroll', () => {
 });
 
 document.querySelector('.nav-open').addEventListener('click', () => {
-  document.querySelector(".overlay").style.width = "100%";
+  document.querySelector(".overlay").style.width = '100%';
+  document.querySelector("html").style.overflow = 'hidden';
 });
 
 document.querySelector('.closebtn').addEventListener('click', () => {
-  document.querySelector(".overlay").style.width = "0%";
+  document.querySelector(".overlay").style.width = '0%';
+  document.querySelector("html").style.overflow = 'auto';
 });
+
+let mobileLinks = document.querySelectorAll('.navItem');
+for (mobile of mobileLinks) {
+  mobile.addEventListener('click', () => {
+    document.querySelector(".overlay").style.width ='0%';
+    document.querySelector("html").style.overflow = 'auto';
+  })
+}

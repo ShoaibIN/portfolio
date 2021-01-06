@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroller">
 
 <head>
   <meta charset="UTF-8">
@@ -12,9 +12,6 @@
 </head>
 
 <body>
-
-
-
   <div class="heading">
     <nav class="navbar page-wrap">
       <a href="/" class="logo">
@@ -22,27 +19,29 @@
       </a>
 
       <ul class="nav-links">
+        <li class="nav-item"><a href="#projects">Projects</a></li>
         <li class="nav-item"><a href="#">About</a></li>
-        <li class="nav-item"><a href="#">Projects</a></li>
         <li class="nav-item"><a href="#">Contact</a></li>
+        <li class="nav-item"><a href="./assets/resume/resume.pdf">Resume</a></li>
       </ul>
       <div class="resp-menu">
         <div class="darkmode2 toggle-button-nav">
-        <div class="light2 fal fa-sun"> </div>
-        <div class="dark2 fal fa-moon toggle-button"></div>
+          <div class="light2 fal fa-sun"> </div>
+          <div class="dark2 fal fa-moon toggle-button"></div>
+        </div>
+        <span class="nav-open">&#9776;</span>
       </div>
-      <span class="nav-open">&#9776;</span>
-      </div>
-      
+
     </nav>
     <div class="overlay">
-        <a  href="javascript:void(0)" class="closebtn">&times;</a>
-        <div class="overlay-content">
-          <a href="#">About</a>
-          <a href="#">Projects</a>
-          <a href="#">Contact</a>
-        </div>
+      <a href="javascript:void(0)" class="closebtn">&times;</a>
+      <div class="overlay-content">
+        <a class="navItem" href="#projects">Projects</a>
+        <a class="navItem" href="#">About</a>
+        <a class="navItem" href="#">Contact</a>
+        <a class="navItem" href="./assets/resume/resume.pdf">Resume</a>
       </div>
+    </div>
 
     <div class="darkmode">
       <div class="light fal fa-sun"> </div>
@@ -51,7 +50,7 @@
 
   </div>
 
-  <section class="portfolio-desc">
+  <section id="projects" class="portfolio-desc">
     <div class="page-wrap">
       <h2>Portfolio</h2>
       <p>
@@ -71,11 +70,10 @@
           <p>This was my first Reactjs project so it holds a special place in my heart. It's built using Reactjs and
             Leaflet with OpenStreetMap data for mapping. It's a project to find if two users are in range of each other.
           </p>
-
-          <a rel="nofollow" href="https://master.d8pjybx1mf2s7.amplifyapp.com/">
+          <a rel="nofollow" href="https://github.com/ShoaibIN/Geo-Fence">
             <button class="portfolio-button checkGithub">Check on Github</button>
           </a>
-          <a rel="nofollow" href="https://github.com/ShoaibIN/Geo-Fence">
+          <a rel="nofollow" href="https://master.d8pjybx1mf2s7.amplifyapp.com/">
             <button class="portfolio-button checkLive">Live Preview</button>
           </a>
 
@@ -98,10 +96,10 @@
             eCommerce website.
           </p>
 
-          <a rel="nofollow" href="http://jammubasket.herokuapp.com/">
+          <a rel="nofollow" href="https://github.com/ShoaibIN/Basket">
             <button class="portfolio-button checkGithub">Check on Github</button>
           </a>
-          <a rel="nofollow" href="https://github.com/ShoaibIN/Basket">
+          <a rel="nofollow" href="http://jammubasket.herokuapp.com/">
             <button class="portfolio-button checkLive">Live Preview</button>
           </a>
 
@@ -123,10 +121,10 @@
             Certificates, banners in Adobe XD and t-Shirt in Corel Draw for the event.
           </p>
 
-          <a rel="nofollow" href="https://shoaibin.github.io/titiksha2020/index.html">
+          <a rel="nofollow" href="https://github.com/ShoaibIN/titiksha2020">
             <button class="portfolio-button checkGithub">Check on Github</button>
           </a>
-          <a rel="nofollow" href="https://github.com/ShoaibIN/titiksha2020">
+          <a rel="nofollow" href="https://shoaibin.github.io/titiksha2020/index.html">
             <button class="portfolio-button checkLive">Live Preview</button>
           </a>
 
@@ -147,10 +145,10 @@
             donation details.
           </p>
 
-          <a rel="nofollow" href="https://www.punarjagransamiti.com/">
+          <a rel="nofollow" href="https://github.com/ShoaibIN/punar">
             <button class="portfolio-button checkGithub">Check on Github</button>
           </a>
-          <a rel="nofollow" href="https://github.com/ShoaibIN/punar">
+          <a rel="nofollow" href="https://www.punarjagransamiti.com/">
             <button class="portfolio-button checkLive">Live Preview</button>
           </a>
 
@@ -172,10 +170,10 @@
             to plan their date. Registration page uses Google Sheets API to show details.
           </p>
 
-          <a rel="nofollow" href="https://shoaibin.github.io/tawiMahal/index.html">
+          <a rel="nofollow" href="https://github.com/ShoaibIN/tawiMahal">
             <button class="portfolio-button checkGithub">Check on Github</button>
           </a>
-          <a rel="nofollow" href="https://github.com/ShoaibIN/tawiMahal">
+          <a rel="nofollow" href="https://shoaibin.github.io/tawiMahal/index.html">
             <button class="portfolio-button checkLive">Live Preview</button>
           </a>
 
@@ -185,6 +183,34 @@
         </figure>
       </div>
     </article>
+  </section>
+
+  <section class="about">
+    <div class="page-wrap">
+      <h2>About Me</h2>
+      <p>
+        I am a web developer with 2 years of experience in web developing sites using basic stack. I have 3+ years of
+        experience on Wordpress Sites.
+        I started my journey into this route by optimizing a wordpress site to get A ranking in GTMetrix speed test.
+        <br> I have developed various websites for
+        businesses and NGO.
+        Right now, I am increasing my knowledge of Javascript and preparing myself to dive into Reactjs.
+      </p>
+      <h3>My Technical Stats</h3>
+      <div class="tags-container">
+        <div class="tag-button">HTML</div>
+        <div class="tag-button">CSS</div>
+        <div class="tag-button">Javascript</div>
+        <div class="tag-button">Bootstrap</div>
+        <div class="tag-button">JQuery</div>
+        <div class="tag-button">Firebug</div>
+        <div class="tag-button">Chrome DevTools</div>
+        <div class="tag-button">Git</div>
+        <div class="tag-button">Firebug</div>
+        <div class="tag-button">Adobe Ai</div>
+        <div class="tag-button">Adobe XD</div>
+      </div>
+    </div>
   </section>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>

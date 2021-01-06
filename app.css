@@ -109,10 +109,43 @@ body {
   box-sizing: border-box;
   transition: all 0.3s;
   color: white;
+  scroll-behavior: smooth;
+  overflow: auto;
+  scrollbar-width: 2px;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #222222;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(100, 98, 98);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Scrollbar fpr firefox */
+.scroller {
+  overflow-y: scroll;
+  scrollbar-color: #222222;
+  scrollbar-width: thin;
 }
 
 p {
   line-height: 1.5em;
+}
+
+button {
+  cursor: pointer;
 }
 
 /* Navbar */
@@ -126,10 +159,6 @@ p {
   align-items: center;
   mix-blend-mode: difference;
   z-index: 100;
-}
-
-button {
-  cursor: pointer;
 }
 
 .logo {
@@ -186,6 +215,8 @@ button {
   background-color: rgba(0, 0, 0, 0.9);
   overflow-x: hidden;
   transition: 0.5s;
+  height: 100%;
+  overflow: hidden;
 }
 
 .overlay-content {
@@ -243,17 +274,23 @@ button {
   z-index: -1;
 }
 
+/* spacing */
 .page-wrap {
   margin: 0 auto;
   width: 90%;
   max-width: 1600px;
 }
 
-
 @media screen and (max-width: 640px) {
   .page-wrap {
     width: 94%;
   }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /* Invert the colors for dark mode */
@@ -332,21 +369,13 @@ body div.darkmode2 {
   }
 }
 
+/* Portfolio Content Text */
 
 .portfolio {
   position: relative;
   margin: 0 auto;
   z-index: 1;
   padding: 4em 0;
-}
-
-.portfolio figure {
-  max-width: 960px;
-  margin: 0 auto;
-}
-
-.portfolio img {
-  max-width: 100%;
 }
 
 .portfolio h3 {
@@ -397,6 +426,8 @@ body div.darkmode2 {
     padding: 7.5em 0;
   }
 }
+
+/* Portfolio Buttons */
 
 .portfolio-button {
   float: left;
@@ -481,6 +512,18 @@ body div.darkmode2 {
   }
 }
 
+/* Portfolio images */
+
+.portfolio figure {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.portfolio img {
+  max-width: 100%;
+}
+
+
 @media screen and (min-width: 1600px) {
   .portfolio figure {
     float: right;
@@ -509,8 +552,82 @@ body div.darkmode2 {
   filter: invert(1);
 }
 
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
+/* About Section */
+
+.about {
+  border-bottom: .5px solid #1f1c1c;
+  background-color: #dddddd;
+  min-height: 50vh;
+  padding: 7rem 0;
+  text-align: center;
+}
+
+.about h2 {
+  color: #222222;
+  font-size: 2em;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.about h3 {
+  margin-top: 2rem;
+  color: #222222;
+  font-size: 2em;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+
+.about p {
+  color: #222222;
+  font-size: 1em;
+  font-weight: 400;
+  padding: 0 18%;
+}
+
+@media screen and (max-width: 1600px) {
+  .about p {
+    padding: 0 12%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .about p {
+    padding: 0;
+  }
+}
+
+.tags-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  width: 50vw;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.tags-container .tag-button {
+  color: #222222;
+  flex: 1 1 auto;
+  margin: 10px;
+  padding: 20px;
+  border: 2px solid #222;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.tags-container .tag-button:hover {
+  cursor: pointer;
+}
+
+.tags-container .tag-button:hover {
+  border-radius: 30px;
+  transform: scale(1.2);
+}
+
+.tags-container .tag-button:hover:after {
+  width: 0%;
 }
