@@ -292,6 +292,18 @@ section h2 {
   z-index: -1;
 }
 
+.heading-center {
+  display: flex;
+  flex-direction: column;
+}
+
+.arrow {
+  color: #222222;
+  width: 8rem;
+  align-self: center;
+  margin-left: 3rem;
+}
+
 /* spacing */
 .page-wrap {
   margin: 0 auto;
@@ -311,10 +323,60 @@ section h2 {
   clear: both;
 }
 
+.heading-title {
+  margin-top: 6rem;
+  width: 80%;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  color: #222;
+  align-self: center;
+  justify-content: center;
+}
+
+.heading-title h1 {
+  align-self: center;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.heading-title h2 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 1024px) {
+  .heading-title h1 {
+    font-size: 2rem;
+  }
+
+  .heading-title h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .heading-title h1 {
+    font-size: 1.5rem;
+  }
+
+  .heading-title h2 {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .heading-title h2 {
+    font-size: 1.1rem;
+  }
+}
+
 /* Invert the colors for dark mode */
 
 body div.darkmode {
-  align-self: flex-end;
+  align-self: center;
   font-size: 3.5rem;
   padding: 1rem 1rem 0.75rem 1rem;
   cursor: pointer;
@@ -574,7 +636,7 @@ body div.darkmode2 {
 .about {
   border-bottom: .5px solid #1f1c1c;
   background-color: #dddddd;
-  min-height: 45vh;
+  min-height: 40vh;
   padding: 7rem 0;
   text-align: center;
 }
@@ -766,10 +828,24 @@ body div.darkmode2 {
 /* Footer */
 .footer {
   display: table;
-  margin: 0 auto 1%;
+  margin: 0 auto 2rem auto;
+  padding: 0 1rem;
+  text-align: center;
 }
 
 .footer-name {
   text-decoration: none;
-  color: white;
+  color: cyan;
+  line-height: 20px;
+}
+
+.break {
+  display: block;
+  height: 10px;
+}
+
+@media screen and (min-width:410px) {
+  .break {
+    display: none;
+  }
 }
