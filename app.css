@@ -100,6 +100,7 @@ video {
   font: inherit;
   font-size: 100%;
   vertical-align: baseline;
+  list-style: none;
 }
 
 html,
@@ -107,10 +108,11 @@ body {
   background: #222222;
   font-family: 'Montserrat', sans-serif;
   box-sizing: border-box;
-  color: white;
+  color: #dddddd;
   scroll-behavior: smooth;
   overflow: auto;
   scrollbar-width: 2px;
+  transition: all 0.3s ease;
 }
 
 /* Scrollbar */
@@ -145,6 +147,7 @@ p {
 
 button {
   cursor: pointer;
+  outline: none;
 }
 
 section h2 {
@@ -169,7 +172,7 @@ section h2 {
 
 .logo {
   display: inline-block;
-  color: white;
+  color: #ddd;
   text-decoration: none;
   font-size: 2rem;
   font-weight: 600;
@@ -396,7 +399,7 @@ body div.darkmode2 {
   margin-bottom: 1.5rem;
 }
 
-.portfolio p {
+.paragraph p {
   font-size: 1.2em;
   font-weight: 200;
   width: 60%;
@@ -405,21 +408,21 @@ body div.darkmode2 {
 }
 
 @media screen and (max-width: 1024px) {
-  .portfolio p {
+  .paragraph p {
     width: 80%;
     margin-left: 10%;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .portfolio p {
+  .paragraph p {
     width: 90%;
     margin-left: 5%;
   }
 }
 
 @media screen and (max-width: 640px) {
-  .portfolio p {
+  .paragraph p {
     font-size: 1.125em;
     width: 100%;
     margin-left: 0;
@@ -427,53 +430,59 @@ body div.darkmode2 {
 }
 
 @media screen and (min-width: 1600px) {
-  .portfolio p {
+  .paragraph p {
     text-align: left;
     width: 100%;
     margin-left: 0;
   }
 
-  .portfolio {
+  .paragraph {
     padding: 7.5em 0;
   }
 }
 
 /* Portfolio Buttons */
-
 .portfolio-button {
   float: left;
   text-decoration: none;
-  width: 12rem;
-  padding: 1rem 1.5rem;
+  width: 16%;
   margin: 1.875em 0 3.75em 0;
-  border-radius: 1rem;
+  padding: 1em 0;
   font-size: 0.875em;
+  border-radius: 1rem;
   background-color: #222;
   color: white;
   border: 1px solid white;
   transition: all 0.3s ease;
 }
 
-@media screen and (max-width: 1599px) {
+@media screen and (max-width: 1024px) {
+
+  /* line 665, scss/style.scss */
   .portfolio-button {
-    width: 35%;
-    max-width: 300px;
+    width: 22%;
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
+
+  /* line 665, scss/style.scss */
   .portfolio-button {
-    width: 35%;
+    width: 30%;
   }
 }
 
 @media screen and (max-width: 640px) {
+
+  /* line 665, scss/style.scss */
   .portfolio-button {
     width: 80%;
   }
 }
 
 @media screen and (min-width: 1600px) {
+
+  /* line 665, scss/style.scss */
   .portfolio-button {
     width: 45%;
   }
@@ -485,24 +494,28 @@ body div.darkmode2 {
   margin-right: 1%;
 }
 
-@media screen and (max-width: 1599px) {
-  .portfolio .checkGithub {
-    margin-right: 5%;
-    margin-left: 26%;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .portfolio .checkGithub {
-    margin-right: 5%;
-    margin-left: 15%;
-  }
-}
-
 @media screen and (max-width: 1024px) {
   .portfolio .checkGithub {
-    margin-right: 5%;
-    margin-left: 13%;
+    margin-left: 27.5%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .portfolio .checkGithub {
+    margin-left: 19.5%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .portfolio .checkGithub {
+    margin: 1.875em 0 0 10%;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .portfolio .checkGithub {
+    margin-left: 0;
+    margin-right: 2%;
   }
 }
 
@@ -513,13 +526,6 @@ body div.darkmode2 {
 
   .portfolio .checkLive {
     margin-left: 10%;
-  }
-}
-
-@media screen and (min-width: 1600px) {
-  .portfolio .checkGithub {
-    margin-left: 0;
-    margin-right: 2%;
   }
 }
 
@@ -644,7 +650,126 @@ body div.darkmode2 {
 .contact {
   border-bottom: .5px solid #1f1c1c;
   background-color: #222222;
-  min-height: 100vh;
   padding: 7rem 0;
   text-align: center;
+}
+
+.contact p {
+  text-align: center;
+  font-weight: 400;
+}
+
+/* .email-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap
+} */
+.social-container {
+  display: table;
+  margin: 0 auto;
+}
+
+.email-container a {
+  width: 15%;
+  max-width: 300px;
+}
+
+.email-button {
+  text-decoration: none;
+  width: 12rem;
+  padding: 1rem 1.5rem;
+  margin: 2rem 0 3rem 0;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  background-color: #222;
+  color: #ddd;
+  border: 2px solid white;
+  transition: all 0.3s ease;
+}
+
+@media screen and (min-width: 1600px) {
+  .email-button {
+    width: 15%;
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 1599px) {
+  .email-button {
+    width: 25%;
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .email-button {
+    width: 35%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .email-button {
+    width: 60%;
+  }
+}
+
+.email-button:hover {
+  filter: invert(1);
+}
+
+.fa-envelope {
+  margin-left: 10px;
+}
+
+.social-links {
+  height: 0;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 640px) {
+  .social-links li {
+    width: 100%;
+    padding: 1.25em 0;
+    border-right: 0;
+    border-bottom: 1px solid rgba(221, 221, 221, 0.185);
+  }
+}
+
+
+.social-links li {
+  float: left;
+  font-size: 0.9rem;
+}
+
+.social-links a {
+  margin-top: 5px;
+  display: block;
+  color: #ddd;
+  text-decoration: none;
+  margin: 0 15px;
+  line-height: 1em;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.social-links a:hover {
+  transform: scale(1.2);
+}
+
+/* Footer */
+.footer {
+  display: table;
+  margin: 0 auto 1%;
+}
+
+.footer-name {
+  text-decoration: none;
+  color: white;
 }

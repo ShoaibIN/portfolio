@@ -50,6 +50,7 @@ document.addEventListener('scroll', () => {
 
   if (window.scrollY > about.offsetTop && window.scrollY < (contact.offsetTop - 100)) {
     navbar.classList.add('lighten');
+    toggle2.classList.remove('toggle-button-nav');
   } else if (window.scrollY < about.offsetTop) {
     navbar.classList.remove('lighten');
   } else if (window.scrollY > (contact.offsetTop - 100)) {
@@ -58,5 +59,10 @@ document.addEventListener('scroll', () => {
 
   if (window.scrollY > contact.offsetTop) {
     navbar.classList.add('shadowed');
+    toggle2.classList.remove('toggle-button-nav');
   }
 });
+
+
+let year = new Date;
+document.querySelector('#year').innerText = year.getFullYear();
