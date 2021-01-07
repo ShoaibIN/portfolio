@@ -519,32 +519,24 @@ body div.darkmode2 {
 }
 
 @media screen and (max-width: 1024px) {
-
-  /* line 665, scss/style.scss */
   .portfolio-button {
     width: 22%;
   }
 }
 
 @media screen and (max-width: 768px) {
-
-  /* line 665, scss/style.scss */
   .portfolio-button {
     width: 30%;
   }
 }
 
 @media screen and (max-width: 640px) {
-
-  /* line 665, scss/style.scss */
   .portfolio-button {
     width: 80%;
   }
 }
 
 @media screen and (min-width: 1600px) {
-
-  /* line 665, scss/style.scss */
   .portfolio-button {
     width: 45%;
   }
