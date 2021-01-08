@@ -319,6 +319,16 @@ section h2 {
   width: 6.5rem;
   align-self: center;
   margin-left: 3rem;
+  animation: arrowAnim 1s infinite  alternate-reverse;
+}
+
+@keyframes arrowAnim {
+  from {
+    transform: translate(0px ,0px);
+  }
+  to {
+    transform: translate(-2px, 10px);
+  }
 }
 
 /* spacing */
@@ -371,16 +381,6 @@ section h2 {
 
   .heading-title h2 {
     font-size: 1.5rem;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .heading-title h1 {
-    font-size: 1.5rem;
-  }
-
-  .heading-title h2 {
-    font-size: 1.1rem;
   }
 }
 
@@ -531,7 +531,7 @@ body div.darkmode2 {
 }
 
 /* Portfolio Buttons */
-.portfolio-button {
+.portfolioButton {
   float: left;
   text-decoration: none;
   width: 16%;
@@ -546,25 +546,25 @@ body div.darkmode2 {
 }
 
 @media screen and (max-width: 1024px) {
-  .portfolio-button {
+  .portfolioButton {
     width: 22%;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .portfolio-button {
+  .portfolioButton {
     width: 30%;
   }
 }
 
 @media screen and (max-width: 640px) {
-  .portfolio-button {
+  .portfolioButton {
     width: 80%;
   }
 }
 
 @media screen and (min-width: 1600px) {
-  .portfolio-button {
+  .portfolioButton {
     width: 45%;
   }
 }
@@ -627,7 +627,7 @@ body div.darkmode2 {
     float: right;
   }
 
-  #img-left {
+  #imgLeft {
     float: left;
   }
 
@@ -646,7 +646,7 @@ body div.darkmode2 {
   }
 }
 
-.portfolio-button:hover {
+.portfolioButton:hover {
   filter: invert(1);
 }
 
@@ -843,7 +843,7 @@ body div.darkmode2 {
 }
 
 .social-links a:hover {
-  transform: scale(1.2);
+  color: cyan;
 }
 
 /* Footer */

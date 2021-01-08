@@ -14,20 +14,20 @@
 <body>
   <section class="heading">
     <nav class="navbar page-wrap">
-      <a href="/" class="logo">
-
+      <div>
+        <a href="/" class="logo">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.47 22.98">
           <g class="cls-1">
             <g id="Layer_2" data-name="Layer 2">
               <g fill="#dddddd" id="Layer_1-2" data-name="Layer 1">
-                <g class="cls-2">
-                  <path class="cls-3" d="M14,22.91h-.16L0,12.54v-2L14,.1V3.93L3.78,11.52,14,19.08Z" />
-                  <path class="cls-3" d="M56.47,12.54l-14,10.37V19.08l10.2-7.56L42.46,3.93V.1h.22L56.47,10.55Z" />
+                <g>
+                  <path class="logoLeft" d="M14,22.91h-.16L0,12.54v-2L14,.1V3.93L3.78,11.52,14,19.08Z" />
+                  <path class="logoRight" d="M56.47,12.54l-14,10.37V19.08l10.2-7.56L42.46,3.93V.1h.22L56.47,10.55Z" />
                 </g>
-                <path class="cls-3"
+                <path class="logoCenter"
                   d="M26.47,21.36A1.62,1.62,0,0,1,26,22.53a1.58,1.58,0,0,1-1.17.45H19.09a1.62,1.62,0,0,1-1.18-.45,1.55,1.55,0,0,1-.46-1.17V15.54h2v5.64h5V15.72L18.11,8.07a2.67,2.67,
                   0,0,1-.66-1.74V1.68A1.58,1.58,0,0,1,17.91.51,1.62,1.62,0,0,1,19.09.06h5.77A1.58,1.58,0,0,1,26,.51a1.65,1.65,0,0,1,.44,1.17V7h-2V1.86h-5V6.69l6.35,7.65a2.62,2.62,0,0,1,.63,1.71Z" />
-                <path class="cls-3"
+                <path class="logoCenter"
                   d="M39.32,23h-2l-.81-5.09H31.94L31.13,23h-2v-.06L33.25,0h2Zm-3.09-6.9-2-12.42-2,12.42Z" />
               </g>
             </g>
@@ -35,11 +35,13 @@
         </svg>
       </a>
 
+      </div>
+      
       <ul class="nav-links">
-        <li class="nav-item"><a href="#projectSection">Projects</a></li>
-        <li class="nav-item"><a href="#aboutSection">About</a></li>
-        <li class="nav-item"><a href="#contactSection">Contact</a></li>
-        <li class="nav-item"><a href="./assets/resume/resume.pdf" target="_blank">Resume</a></li>
+        <li class="nav-item stagger1"><a href="#projectSection">Projects</a></li>
+        <li class="nav-item stagger1"><a href="#aboutSection">About</a></li>
+        <li class="nav-item stagger1"><a href="#contactSection">Contact</a></li>
+        <li class="nav-item stagger1"><a href="./assets/resume/resume.pdf" target="_blank">Resume</a></li>
       </ul>
       <div class="resp-menu">
         <div class="darkmode2 toggle-button-nav">
@@ -75,8 +77,8 @@
 
     <div class="heading-center">
       <div class="heading-title">
-        <h1>Shoaib Ahmed</h1>
-        <h2>A Friendly Neighbourhood Developer, Designer, Gamer</h2>
+        <h1 class="stagger2">Shoaib Ahmed</h1>
+        <h2 class="stagger2">A Friendly Neighbourhood Developer, Designer, Gamer</h2>
       </div>
 
 
@@ -123,8 +125,8 @@
 
   <section id="projectSection" class="portfolio-desc">
     <div class="page-wrap">
-      <h2>Portfolio</h2>
-      <p>
+      <h2 class="stagger3">Portfolio</h2>
+      <p class="stagger3">
         Below you will find some of my projects that I have worked on. While working on projects, I focus on pixel
         perfection and make sure it's satisfactory from the user's prespective.
         The process of creating every project starts with client's usage discussion, then research and wireframing and
@@ -137,30 +139,30 @@
     <article class="portfolio" role="article">
       <div class="page-wrap clearfix">
         <div class="info">
-          <h3>Geo Fencing using Reactjs</h3>
-          <p>This was my first Reactjs project so it holds a special place in my heart. It's built using Reactjs and
+          <h3 class="stagger3">Geo Fencing using Reactjs</h3>
+          <p class="stagger3">This was my first Reactjs project so it holds a special place in my heart. It's built using Reactjs and
             Leaflet with OpenStreetMap data for mapping. It's a project to find if two users are in range of each other.
           </p>
           <a rel="nofollow" href="https://github.com/ShoaibIN/Geo-Fence">
-            <button class="portfolio-button checkGithub">Check on Github</button>
+            <button class="portfolioButton checkGithub">Check on Github</button>
           </a>
           <a rel="nofollow" href="https://master.d8pjybx1mf2s7.amplifyapp.com/">
-            <button class="portfolio-button checkLive">Live Preview</button>
+            <button class="portfolioButton checkLive">Live Preview</button>
           </a>
 
         </div>
-        <figure>
+        <figure class="portfolioImg">
           <img src="./assets/imgs/geo.png" alt="">
         </figure>
 
       </div>
     </article>
 
-    <article class="portfolio" role="article">
+    <article id="basket" class="portfolio" role="article">
       <div class="page-wrap clearfix">
         <div class="info info-right">
-          <h3>Jammu Basket</h3>
-          <p>Jammu Basket is an grocery eCommerce website. I worked with a team of 4 and did the frontend part of the
+          <h3 class="stagger3">Jammu Basket</h3>
+          <p class="stagger3">Jammu Basket is an grocery eCommerce website. I worked with a team of 4 and did the frontend part of the
             project.
             Website uses handlebars for the frontend and Nodejs (Express, MongoDB) as the backend. It's a fully
             functional
@@ -168,14 +170,14 @@
           </p>
 
           <a rel="nofollow" href="https://github.com/ShoaibIN/Basket">
-            <button class="portfolio-button checkGithub">Check on Github</button>
+            <button class="portfolioButton checkGithub">Check on Github</button>
           </a>
           <a rel="nofollow" href="http://jammubasket.herokuapp.com/">
-            <button class="portfolio-button checkLive">Live Preview</button>
+            <button class="portfolioButton checkLive">Live Preview</button>
           </a>
 
         </div>
-        <figure id="img-left">
+        <figure  id="imgLeft">
           <img src="./assets/imgs/basket.png" alt="">
         </figure>
       </div>
@@ -184,8 +186,8 @@
     <article class="portfolio" role="article">
       <div class="page-wrap clearfix">
         <div class="info">
-          <h3>Titiksha 2020</h3>
-          <p>I was in charge of development for the website for the technical fest of SMVD University for the 2020
+          <h3 class="stagger3">Titiksha 2020</h3>
+          <p class="stagger3">I was in charge of development for the website for the technical fest of SMVD University for the 2020
             version.
             It's a static website which uses Google Sheets API for registration of events. I also did the SEO of the
             website and managed to rank 1 for multiple keywords. Apart from website, I also designed logo,
@@ -193,14 +195,14 @@
           </p>
 
           <a rel="nofollow" href="https://github.com/ShoaibIN/titiksha2020">
-            <button class="portfolio-button checkGithub">Check on Github</button>
+            <button class="portfolioButton checkGithub">Check on Github</button>
           </a>
           <a rel="nofollow" href="https://shoaibin.github.io/titiksha2020/index.html">
-            <button class="portfolio-button checkLive">Live Preview</button>
+            <button class="portfolioButton checkLive">Live Preview</button>
           </a>
 
         </div>
-        <figure>
+        <figure class="portfolioImg">
           <img src="./assets/imgs/titiksha.png" alt="">
         </figure>
       </div>
@@ -209,22 +211,22 @@
     <article class="portfolio" role="article">
       <div class="page-wrap clearfix">
         <div class="info info-right">
-          <h3>Punarjagran Samiti</h3>
-          <p>This was a voluntary work for a Delhi, India based NGO which works for less privileged of the surrounding
+          <h3 class="stagger3">Punarjagran Samiti</h3>
+          <p class="stagger3">This was a voluntary work for a Delhi, India based NGO which works for less privileged of the surrounding
             area.
             Website contains basic information about the NGO, a gallery to showcase their work, a contact page and
             donation details.
           </p>
 
           <a rel="nofollow" href="https://github.com/ShoaibIN/punar">
-            <button class="portfolio-button checkGithub">Check on Github</button>
+            <button class="portfolioButton checkGithub">Check on Github</button>
           </a>
           <a rel="nofollow" href="https://www.punarjagransamiti.com/">
-            <button class="portfolio-button checkLive">Live Preview</button>
+            <button class="portfolioButton checkLive">Live Preview</button>
           </a>
 
         </div>
-        <figure id="img-left">
+        <figure id="imgLeft">
           <img src="./assets/imgs/punar.png" alt="">
         </figure>
       </div>
@@ -233,8 +235,8 @@
     <article class="portfolio" role="article">
       <div class="page-wrap clearfix">
         <div class="info">
-          <h3>Tawi Mahal</h3>
-          <p>This project was for one of the biggest banquet hall in the Jammu City. It is a static website with
+          <h3 class="stagger3">Tawi Mahal</h3>
+          <p class="stagger3">This project was for one of the biggest banquet hall in the Jammu City. It is a static website with
             information
             about how to contact the hall, a gallery to showcase their services and a booking page where people can
             check the previous booking
@@ -242,14 +244,14 @@
           </p>
 
           <a rel="nofollow" href="https://github.com/ShoaibIN/tawiMahal">
-            <button class="portfolio-button checkGithub">Check on Github</button>
+            <button class="portfolioButton checkGithub">Check on Github</button>
           </a>
           <a rel="nofollow" href="https://shoaibin.github.io/tawiMahal/index.html">
-            <button class="portfolio-button checkLive">Live Preview</button>
+            <button class="portfolioButton checkLive">Live Preview</button>
           </a>
 
         </div>
-        <figure>
+        <figure class="portfolioImg">
           <img src="./assets/imgs/tawi.png" alt="">
         </figure>
       </div>
@@ -258,8 +260,8 @@
 
   <section id="aboutSection" class="about">
     <div class="page-wrap">
-      <h2>About Me</h2>
-      <p>
+      <h2 class="aboutStagger">About Me</h2>
+      <p class="aboutStagger">
         I am a web developer with 2 years of experience in web developing sites using basic stack. I have 3+ years of
         experience on Wordpress Sites.
         I started my journey into this route by optimizing a wordpress site to get A ranking in GTMetrix speed test.
@@ -267,7 +269,7 @@
         businesses and NGO.
         Right now, I am increasing my knowledge of Javascript and preparing myself to dive into Reactjs.
       </p>
-      <h3>My Technical Stats</h3>
+      <h3 class="aboutStagger">My Technical Stats</h3>
       <div class="tags-container">
         <div class="tag-button">HTML</div>
         <div class="tag-button">CSS</div>
@@ -286,8 +288,8 @@
 
   <section id="contactSection" class="contact paragraph">
     <div class="page-wrap">
-      <h2>Ready? Lets Talk</h2>
-      <p>
+      <h2 class="stagger5">Ready? Lets Talk</h2>
+      <p class="stagger5">
         You can contact me on plenty of platforms.
         <br> Whether it's to build something, talk about something or justy say Hi!
       </p>
@@ -306,12 +308,12 @@
 
       <div class="social-container">
         <ul class="social-links clearfix">
-          <li><a target="_blank" rel="nofollow" href="https://twitter.com/purrdev">Twitter</a></li>
-          <li><a target="_blank" rel="nofollow" href="https://github.com/ShoaibIN">Github</a></li>
-          <li><a target="_blank" rel="nofollow" href="https://www.linkedin.com/in/shoaib-a-888a1a116">Linkedin</a></li>
-          <li><a target="_blank" rel="nofollow" href="https://www.facebook.com/shoaib152">Facebook</a></li>
-          <li><a target="_blank" rel="nofollow" href="https://www.reddit.com/user/Ancient_Touch">Reddit</a></li>
-          <li><a target="_blank" rel="nofollow" href="https://www.quora.com/profile/Shoaib-Ahmed-119">Quora</a></li>
+          <li><a target="_blank" rel="nofollow" class="stagger5" href="https://twitter.com/purrdev">Twitter</a></li>
+          <li><a target="_blank" rel="nofollow" class="stagger5" href="https://github.com/ShoaibIN">Github</a></li>
+          <li><a target="_blank" rel="nofollow" class="stagger5" href="https://www.linkedin.com/in/shoaib-a-888a1a116">Linkedin</a></li>
+          <li><a target="_blank" rel="nofollow" class="stagger5" href="https://www.facebook.com/shoaib152">Facebook</a></li>
+          <li><a target="_blank" rel="nofollow" class="stagger5" href="https://www.reddit.com/user/Ancient_Touch">Reddit</a></li>
+          <li><a target="_blank" rel="nofollow" class="stagger5" href="https://www.quora.com/profile/Shoaib-Ahmed-119">Quora</a></li>
 
         </ul>
       </div>

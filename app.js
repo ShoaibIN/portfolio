@@ -66,3 +66,145 @@ document.addEventListener('scroll', () => {
 
 let year = new Date;
 document.querySelector('#year').innerText = year.getFullYear();
+
+// GSAP Animations
+gsap.registerPlugin(ScrollTrigger)
+
+let tl = gsap.timeline();
+
+tl.from('.stagger2', {
+    opacity: 0,
+    y: -50,
+    stagger: .3,
+    ease: 'Power4.easeOut',
+    duration: 2
+  }, '=.5')
+  .from('.stagger1', {
+    opacity: 0,
+    x: -50,
+    stagger: .3,
+    ease: 'Power4.easeOut',
+    duration: 2
+  }, '-=2')
+  .from('.logoLeft', {
+    opacity: 50,
+    x: -20,
+    ease: 'Power0.easeNone',
+    duration: 0.5
+  }, '-=3')
+  .from('.logoRight', {
+    opacity: 50,
+    x: 20,
+    ease: Power0,
+    duration: 0.5
+  }, '-=2.5')
+  .from('.logoCenter', {
+    opacity: 50,
+    y: -25,
+    ease: Power0,
+    duration: 0.5
+  }, '-=2')
+  .from('.darkmode', {
+    opacity: 0,
+    y: -25,
+    ease: Power0,
+    duration: 0.5
+  }, '-=2')
+  .from('.arrow', {
+    opacity: 0,
+    y: -50,
+    ease: Power0,
+    duration: 0.5
+  }, '-=1.6');
+
+let stagger3 = gsap.utils.toArray('.stagger3');
+stagger3.forEach((stagger3) => {
+  gsap.from(stagger3, {
+    scrollTrigger: {
+      trigger: stagger3,
+      start: "top center"
+    },
+    opacity: 0,
+    y: -50,
+    stagger: .3,
+    ease: 'Power4.easeOut',
+    duration: 2
+  });
+});
+
+let portfolioButton = gsap.utils.toArray('.portfolioButton');
+portfolioButton.forEach((portfolioButton) => {
+  gsap.from(portfolioButton, {
+    scrollTrigger: {
+      trigger: portfolioButton,
+      start: "top center"
+    },
+    opacity: 0,
+    y: 50,
+    ease: 'Power4.easeOut',
+    duration: 1
+  });
+});
+
+let portfolioImg = gsap.utils.toArray('.portfolioImg');
+portfolioImg.forEach((portfolioImg) => {
+  gsap.from(portfolioImg, {
+    scrollTrigger: {
+      trigger: portfolioImg,
+      start: "top center"
+    },
+    opacity: 0,
+    x: 100,
+    ease: 'Power4.easeOut',
+    duration: 1
+  });
+});
+
+let ImgLeft = gsap.utils.toArray('#imgLeft');
+ImgLeft.forEach((ImgLeft) => {
+  gsap.from(ImgLeft, {
+    scrollTrigger: {
+      trigger: ImgLeft,
+      start: "top center"
+    },
+    opacity: 0,
+    x: -100,
+    ease: 'Power4.easeOut',
+    duration: 1
+  });
+});
+
+gsap.from('.aboutStagger', {
+  scrollTrigger: {
+    trigger: '.aboutStagger',
+    start: "top center"
+  },
+  opacity: 0,
+  y: 100,
+  stagger: .3,
+  ease: 'Power4.easeOut',
+  duration: 2
+});
+
+gsap.from('.tag-button', {
+  scrollTrigger: {
+    trigger: '.tag-button',
+    start: "top center"
+  },
+  stagger: .1,
+  scale: .1,
+  duration: .5,
+  ease: 'Back.easeOut.config(1.7)'
+});
+
+gsap.from('.stagger5', {
+  scrollTrigger: {
+    trigger: '.stagger5',
+    start: "top bottom"
+  },
+  opacity: 0,
+    x: -50,
+    stagger: .3,
+    ease: 'Power4.easeOut',
+    duration: 2
+});
