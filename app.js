@@ -186,17 +186,6 @@ gsap.from('.aboutStagger', {
   duration: 2
 });
 
-gsap.from('.tag-button', {
-  scrollTrigger: {
-    trigger: '.tag-button',
-    start: "top center"
-  },
-  stagger: .1,
-  scale: .1,
-  duration: .5,
-  ease: 'Back.easeOut.config(1.7)'
-});
-
 gsap.from('.stagger5', {
   scrollTrigger: {
     trigger: '.stagger5',
