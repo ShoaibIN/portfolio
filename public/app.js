@@ -15,37 +15,19 @@ let toggle2 = document.querySelector('.darkmode2');
 toggle.addEventListener('click', invert);
 toggle2.addEventListener('click', invert);
 
-document.querySelector('.nav-open').addEventListener('click', () => {
-  document.querySelector(".overlay").style.width = '100%';
-  document.querySelector("html").style.overflow = 'hidden';
-});
-
-document.querySelector('.closebtn').addEventListener('click', () => {
-  document.querySelector(".overlay").style.width = '0%';
-  document.querySelector("html").style.overflow = 'auto';
-});
-
-let mobileLinks = document.querySelectorAll('.navItem');
-for (mobile of mobileLinks) {
-  mobile.addEventListener('click', () => {
-    document.querySelector(".overlay").style.width = '0%';
-    document.querySelector("html").style.overflow = 'auto';
-  })
-}
-
 let project = document.querySelector('#projectSection');
 let about = document.querySelector('#aboutSection');
 let contact = document.querySelector('#contactSection');
 let navbar = document.querySelector('.navbar');
 document.addEventListener('scroll', () => {
   if (window.scrollY > (project.offsetTop - 20) && window.scrollY < (about.offsetTop - 100)) {
-    navbar.classList.add('shadowed');
+    navbar.id = 'shadowed';
     toggle2.classList.remove('toggle-button-nav');
   } else if (window.scrollY < (project.offsetTop - 20)) {
-    navbar.classList.remove('shadowed');
+    navbar.removeAttribute('id');
     toggle2.classList.add('toggle-button-nav');
   } else if (window.scrollY > (about.offsetTop - 100)) {
-    navbar.classList.remove('shadowed');
+    navbar.removeAttribute('id');
   }
 
   if (window.scrollY > about.offsetTop && window.scrollY < (contact.offsetTop - 100)) {
@@ -58,11 +40,26 @@ document.addEventListener('scroll', () => {
   }
 
   if (window.scrollY > contact.offsetTop) {
-    navbar.classList.add('shadowed');
+    navbar.id = 'shadowed';
     toggle2.classList.remove('toggle-button-nav');
   }
 });
 
+// Menu Bar
+
+let body = document.querySelector('body');
+let menu = document.querySelector('.menu-icon');
+let menuItems = document.querySelectorAll('.nav__list-item');
+
+menu.addEventListener('click', () => {
+  body.classList.toggle('nav-active');
+})
+
+for (items of menuItems) {
+  items.addEventListener('click', () => {
+  body.classList.toggle('nav-active');
+})
+}
 
 let year = new Date;
 document.querySelector('#year').innerText = year.getFullYear();
@@ -192,7 +189,7 @@ gsap.from('.stagger5', {
     start: "top bottom"
   },
   opacity: 0,
-    x: -50,
+    y: -50,
     stagger: .3,
     ease: 'Power4.easeOut',
     duration: 2

@@ -42,7 +42,7 @@
 
 <body>
   <section class="heading">
-    <nav class="navbar page-wrap">
+    <nav class="navbar page-wrap" id="id">
       <div>
         <a href="/" class="logo">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.47 22.98">
@@ -91,16 +91,25 @@
             </g>
           </svg>
         </div>
-        <span class="nav-open">&#9776;</span>
+        <div class="nav-but-wrap" id="navAnim">
+          <div class="menu-icon hover-target">
+            <span class="menu-icon__line menu-icon__line-left"></span>
+            <span class="menu-icon__line"></span>
+            <span class="menu-icon__line menu-icon__line-right"></span>
+          </div>
+        </div>
       </div>
     </nav>
-    <div class="overlay">
-      <a href="javascript:void(0)" class="closebtn">&times;</a>
-      <div class="overlay-content">
-        <a class="navItem" href="#projectSection">Projects</a>
-        <a class="navItem" href="#aboutSection">About</a>
-        <a class="navItem" href="#contactSection">Contact</a>
-        <a class="navItem" target="_blank" href="./assets/resume/resume.pdf">Resume</a>
+
+    <div class="nav">
+      <div class="nav__content">
+        <ul class="nav__list">
+          <li class="nav__list-item"><a href="#projectSection" class="hover-target">Projects</a></li>
+          <li class="nav__list-item"><a href="#aboutSection" class="hover-target">About</a></li>
+          <li class="nav__list-item"><a href="#contactSection" class="hover-target">Contact</a></li>
+          <li class="nav__list-item"><a href="./assets/resume/resume.pdf" target="_blank"
+              class="hover-target">Resume</a></li>
+        </ul>
       </div>
     </div>
 
