@@ -225,22 +225,6 @@ section h2 {
   transition: all 0.3s ease-out;
 }
 
-#navAnim {
-  animation: navAnim 1s alternate-reverse;
-}
-
-@keyframes navAnim {
-  from {
-    transform: translate(0px, 0px); 
-  }
-
-  to {
-    transform: translate(15px, 0px);
-  }
-}
-
-
-
 @media screen and (max-width: 640px) {
   .nav-but-wrap {
     display: block;
